@@ -51,6 +51,6 @@ public class Main {
 
         System.out.println("YOU HAVE FAILED");
         System.out.println("The number was" + " " + rNumber + " would you like to play again?");
-    }
 
+    }
 }
