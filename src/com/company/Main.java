@@ -1,13 +1,13 @@
 package com.company;
 
-import com.sun.tools.javac.tree.JCTree;
-
 import java.util.Scanner;
 
 // use this scanner for user input
 public class Main {
 
     public static void main(String[] args) {
+        int rNumber = (int) Math.ceil(Math.random() * 100);
+
 
         //1. allow user input of a number (guess)
         //2. tell the user if their guess is too high or too low
@@ -35,8 +35,6 @@ public class Main {
 
             int userGuess = input.nextInt();
 
-            int rNumber = (int) Math.ceil(Math.random() * 100);
-
             if (userGuess > rNumber) {
 
                 System.out.println("Your number is too high, Try Again");
@@ -52,6 +50,7 @@ public class Main {
         }
 
         System.out.println("YOU HAVE FAILED");
+        System.out.println("The number was" + " " + rNumber + " would you like to play again?");
     }
 
 }
