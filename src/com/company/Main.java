@@ -31,7 +31,7 @@ public class Main {
         int numberOfGuesses = 0;
         while (numberOfGuesses < 5) {
 
-            System.out.println("Enter Your Guess:");
+            System.out.println("Enter Your Guess to begin:");
 
             int userGuess = input.nextInt();
 
