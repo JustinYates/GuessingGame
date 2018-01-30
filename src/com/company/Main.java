@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 // use this scanner for user input
 public class Main {
@@ -34,6 +35,7 @@ public class Main {
 
             System.out.println("Enter Your Guess:");
 
+
             int userGuess = input.nextInt();
 
             if (userGuess > rNumber) {
@@ -47,7 +49,7 @@ public class Main {
             } else if (userGuess == rNumber) {
                 System.out.println("You have got it right");
                 System.exit(1);
-            }else if (numberOfGuesses == 5)
+            } else if (numberOfGuesses == 5)
                 System.out.print(rNumber);
         }
 
@@ -56,8 +58,6 @@ public class Main {
         System.out.println("The number was" + " " + rNumber + " would you like to play again?");
 
         String w = e.nextLine();
-
-
 
         if (w == "Yes" || w == "yes") {
             System.out.println("Okay");
