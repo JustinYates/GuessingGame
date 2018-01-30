@@ -32,27 +32,32 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int numberOfGuesses = 0;
         while (numberOfGuesses < 5) {
+            try {
 
-            System.out.println("Enter Your Guess:");
+                System.out.println("Enter Your Guess:");
 
 
-            int userGuess = input.nextInt();
+                int userGuess = input.nextInt();
 
-            if (userGuess > rNumber) {
+                if (userGuess > rNumber) {
 
-                System.out.println("Your number is too high, Try Again");
-                numberOfGuesses++;
+                    System.out.println("Your number is too high, Try Again");
+                    numberOfGuesses++;
 
-            } else if (userGuess < rNumber) {
-                System.out.println("Your number is too low, try again");
-                numberOfGuesses++;
-            } else if (userGuess == rNumber) {
-                System.out.println("You have got it right");
-                System.exit(1);
-            } else if (numberOfGuesses == 5)
-                System.out.print(rNumber);
+                } else if (userGuess < rNumber) {
+                    System.out.println("Your number is too low, try again");
+                    numberOfGuesses++;
+                } else if (userGuess == rNumber) {
+                    System.out.println("You have got it right");
+                    System.exit(1);
+                } else if (numberOfGuesses == 5)
+                    System.out.print(rNumber);
+            } catch (InputMismatchException ime) {
+                System.out.print("That's not a number try again and ");
+                numberOfGuesses --;
+
+            }
         }
-
         System.out.println("YOU HAVE FAILED");
 
         System.out.println("The number was" + " " + rNumber + " would you like to play again?");
