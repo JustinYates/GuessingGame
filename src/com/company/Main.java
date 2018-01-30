@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         int rNumber = (int) Math.ceil(Math.random() * 100);
+        Scanner e = new Scanner(System.in);
 
 
         //1. allow user input of a number (guess)
@@ -43,14 +44,25 @@ public class Main {
             } else if (userGuess < rNumber) {
                 System.out.println("Your number is too low, try again");
                 numberOfGuesses++;
-            } else if (userGuess == rNumber)
+            } else if (userGuess == rNumber) {
                 System.out.println("You have got it right");
-            else if (numberOfGuesses == 5)
+                System.exit(1);
+            }else if (numberOfGuesses == 5)
                 System.out.print(rNumber);
         }
 
         System.out.println("YOU HAVE FAILED");
+
         System.out.println("The number was" + " " + rNumber + " would you like to play again?");
 
+        String w = e.nextLine();
+
+
+
+        if (w == "Yes" || w == "yes") {
+            System.out.println("Okay");
+        } else if (w == "No" || w == "no") {
+            System.out.println("See ya");
+        }
     }
 }
