@@ -31,9 +31,9 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         int numberOfGuesses = 0;
-        while (numberOfGuesses < 5) {
-            try {
+        try {
 
+            while (numberOfGuesses < 5) {
                 System.out.println("Enter Your Guess:");
 
 
@@ -49,25 +49,22 @@ public class Main {
                     numberOfGuesses++;
                 } else if (userGuess == rNumber) {
                     System.out.println("You have got it right");
-                    System.exit(1);
                 } else if (numberOfGuesses == 5)
                     System.out.print(rNumber);
-            } catch (InputMismatchException ime) {
-                System.out.print("That's not a number try again and ");
-                numberOfGuesses --;
-
             }
+        } catch (InputMismatchException ime) {
+            System.out.print("That's not a number try again and ");
+            numberOfGuesses--;
         }
+
         System.out.println("YOU HAVE FAILED");
 
         System.out.println("The number was" + " " + rNumber + " would you like to play again?");
-
+        String yes = "yes";
         String w = e.nextLine();
 
-        if (w == "Yes" || w == "yes") {
+        if (w == yes) {
             System.out.println("Okay");
-        } else if (w == "No" || w == "no") {
-            System.out.println("See ya");
         }
     }
 }
