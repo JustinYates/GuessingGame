@@ -27,7 +27,7 @@ public class Main {
         // && And
         // || is or
         // 0 is counting as a first chance
-
+        // don't forget to fix bracket placing and looping before turning in final.
 
         Scanner input = new Scanner(System.in);
         int numberOfGuesses = 0;
